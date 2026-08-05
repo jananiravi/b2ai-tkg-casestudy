@@ -7,4 +7,12 @@ editor_options:
   chunk_output_type: console
 ---
 
-Describe your project here.
+This repo collects case studies evaluating the [Bridge2AI Talent Knowledge Graph](https://github.com/jiaweixu98/bridge2aikg)
+(KG) — built and maintained separately from this repo — against concrete use cases:
+mentorship sourcing, interdisciplinary grant team formation, and cross-disciplinary
+niche mapping. The goal is to determine what the existing KG query capabilities support
+today, and what gaps remain.
+
+## Attribution
+
+Case studies authored by Monica Munoz-Torres and Janani Ravi.

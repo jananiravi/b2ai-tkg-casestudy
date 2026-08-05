@@ -8,4 +8,12 @@ editor_options:
   chunk_output_type: console
 ---
 
-Welcome to our project website.
+Case studies exploring what the Bridge2AI Talent Knowledge Graph (KG) can and can't do
+for real workflows — sourcing niche mentorship, assembling interdisciplinary grant
+teams, and mapping cross-disciplinary research niches.
+
+## Case studies
+
+* [Case study 1: Sourcing niche mentorship & wrap-around support](niche_mentorship.html)
+* [Case study 2: Precision teaming for interdisciplinary grants](precision_interdisc_teaming.html)
+* [Case study 3: Mapping and dominating cross-disciplinary niches](map_crossdisc_niches.html)

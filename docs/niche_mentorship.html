@@ -11,7 +11,7 @@
 
 
 
-<title>License</title>
+<title>niche_mentorship.knit.md</title>
 
 <script src="site_libs/header-attrs-2.31/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -29,6 +29,9 @@
        h6 {font-size: 12px;}
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
@@ -229,6 +232,69 @@ $(document).ready(function () {
 
 
 
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
 
 </head>
 
@@ -236,6 +302,16 @@ $(document).ready(function () {
 
 
 <div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -273,7 +349,6 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">License</h1>
 
 </div>
 
@@ -281,7 +356,7 @@ $(document).ready(function () {
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-report" data-toggle="collapse" data-target="#workflowr-report">
 <span class="glyphicon glyphicon-list" aria-hidden="true"></span>
-workflowr <span class="glyphicon glyphicon-exclamation-sign text-danger"
+workflowr <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span>
 </button>
 </p>
@@ -292,8 +367,8 @@ aria-hidden="true"></span>
 </li>
 <li>
 <a data-toggle="tab" href="#checks"> Checks <span
-class="glyphicon glyphicon-exclamation-sign text-danger"
-aria-hidden="true"></span> </a>
+class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
+</a>
 </li>
 <li>
 <a data-toggle="tab" href="#versions">Past versions</a>
@@ -306,9 +381,9 @@ aria-hidden="true"></span> </a>
 </p>
 <p>
 <strong>Checks:</strong> <span
-class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 1
+class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 2
 <span class="glyphicon glyphicon-exclamation-sign text-danger"
-aria-hidden="true"></span> 1
+aria-hidden="true"></span> 0
 </p>
 <p>
 <strong>Knit directory:</strong> <code>b2ai-tkg-casestudy/</code> <span
@@ -331,21 +406,18 @@ versions</em> tab lists the development history.
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguncommittedchanges">
-<span class="glyphicon glyphicon-exclamation-sign text-danger"
-aria-hidden="true"></span> <strong>R Markdown file:</strong> uncommitted
-changes </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguptodate">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>R Markdown file:</strong> up-to-date
+</a>
 </p>
 </div>
-<div id="strongRMarkdownfilestronguncommittedchanges"
+<div id="strongRMarkdownfilestronguptodate"
 class="panel-collapse collapse">
 <div class="panel-body">
-<p>The R Markdown file has unstaged changes. To know which version of
-the R Markdown file created these results, you’ll want to first commit
-it to the Git repo. If you’re still working on the analysis, you can
-ignore this warning. When you’re finished, you can run
-<code>wflow_publish</code> to commit the R Markdown file and build the
-HTML.</p>
+<p>Great! Since the R Markdown file has been committed to the Git
+repository, you know the exact version of the code that produced these
+results.</p>
 </div>
 </div>
 </div>
@@ -408,11 +480,11 @@ have uncommitted changes.
 <div id="versions" class="tab-pane fade">
 <p>
 These are the previous versions of the repository in which changes were
-made to the R Markdown (<code>analysis/license.Rmd</code>) and HTML
-(<code>docs/license.html</code>) files. If you’ve configured a remote
-Git repository (see <code>?wflow_git_remote</code>), click on the
-hyperlinks in the table below to view the files as they were in that
-past version.
+made to the R Markdown (<code>analysis/niche_mentorship.Rmd</code>) and
+HTML (<code>docs/niche_mentorship.html</code>) files. If you’ve
+configured a remote Git repository (see <code>?wflow_git_remote</code>),
+click on the hyperlinks in the table below to view the files as they
+were in that past version.
 </p>
 <div class="table-responsive">
 <table class="table table-condensed table-hover">
@@ -441,24 +513,24 @@ Message
 Rmd
 </td>
 <td>
-<a href="https://github.com/jananiravi/b2ai-tkg-casestudy/blob/416d360988d700fdba5c8145e2fa26eb0024dbe4/analysis/license.Rmd" target="_blank">416d360</a>
+<a href="https://github.com/jananiravi/b2ai-tkg-casestudy/blob/f7415f8d9f1c8b0b27fbeca9104ee66466bd176d/analysis/niche_mentorship.Rmd" target="_blank">f7415f8</a>
 </td>
 <td>
-GitHub
+Janani Ravi
 </td>
 <td>
 2026-08-05
 </td>
 <td>
-Initial commit
+moved next steps to issue
 </td>
 </tr>
 <tr>
 <td>
-html
+Rmd
 </td>
 <td>
-<a href="https://rawcdn.githack.com/jananiravi/b2ai-tkg-casestudy/416d360988d700fdba5c8145e2fa26eb0024dbe4/docs/license.html" target="_blank">416d360</a>
+<a href="https://github.com/jananiravi/b2ai-tkg-casestudy/blob/f29ddd429c823e3eeefc809b13f0ad95eb6278bd/analysis/niche_mentorship.Rmd" target="_blank">f29ddd4</a>
 </td>
 <td>
 GitHub
@@ -467,7 +539,7 @@ GitHub
 2026-08-05
 </td>
 <td>
-Initial commit
+Create case study for niche mentorship sourcing
 </td>
 </tr>
 </tbody>
@@ -477,13 +549,112 @@ Initial commit
 </div>
 </div>
 </div>
-<p>The code in this repository is licensed under the <a
-href="https://choosealicense.com/licenses/mit/">MIT License</a>, as
-recorded in the <code>LICENSE</code> file in the root of this repo
-(copyright JRaviLab, PI: Janani Ravi).</p>
-<p>The written content (case studies, analysis) on this site is licensed
-under a <a href="https://creativecommons.org/licenses/by/4.0/">Creative
-Commons Attribution 4.0 International License</a>.</p>
+<div id="case-study-1-sourcing-niche-mentorship-wrap-around-support"
+class="section level1">
+<h1>Case study 1: Sourcing niche mentorship &amp; wrap-around
+support</h1>
+<p>Status: <strong>scoped — API call identified, ready for someone with
+backend access to run</strong></p>
+<div id="scope-decided-2026-07-24" class="section level2">
+<h2>Scope (decided 2026-07-24)</h2>
+<p>Standing, general scenario — not tied to a specific event. Persona:
+an early-career researcher (ECR/trainee), at any point in time, whose
+local institution lacks mentorship in a specific skill or standard they
+need. The All-Hands lightning-pitch matching (see
+<code>notes/context.md</code>) is precedent/evidence that this is
+workable, not the scope itself.</p>
+<p><strong>Validation approach</strong>: manual expert review of
+shortlists generated from synthetic personas (no real-person consent
+needed for a first pass). See tracking issue for reviewer assignments
+and backend query execution.</p>
+</div>
+<div id="synthetic-test-personas" class="section level2">
+<h2>Synthetic test personas</h2>
+<p>Each is deliberately cross-DGP / cross-institution-type, since
+“niche” mentorship is precisely the case where the right mentor is
+unlikely to be at the same institution or in the same DGP.</p>
+<p><strong>Persona A — wet-lab-to-ML gap.</strong> Postdoc, CM4AI,
+wet-lab genomics/proteomics background, first time needing to apply
+ML/AI-readiness standards (e.g., FAIRSCAPE-style data packaging) to her
+own data. Non-R1 institution. Needs: a mentor who has <em>actually
+done</em> AI-readiness standardization on biological data, not just a
+computational person in general.</p>
+<p><strong>Persona B — clinical-to-governance gap.</strong> Clinical
+fellow, CHoRUS or AI-READi, strong clinical/EHR data background, PI is
+asking them to help draft a data governance / responsible-AI section of
+a paper or protocol. Healthcare/clinical institution type. Needs: a
+mentor with ELSI/data-governance publication history, ideally with prior
+Bridge2AI-standards authorship (the 54-paper set in
+<code>notes/context.md</code> is a natural candidate pool).</p>
+<p><strong>Persona C — grant-writing-translation gap.</strong>
+Early-career data scientist, Voice DGP, technically strong, has never
+co-written an interdisciplinary grant with a clinical partner. Needs: a
+mentor who has bridged clinical + technical co-authorship across
+institutions before (i.e., has demonstrable cross-institution, cross-DGP
+collaboration in their own publication history) — someone who can teach
+the <em>process</em>, not just supply domain content.</p>
+</div>
+<div id="kg-query-spec" class="section level2">
+<h2>KG query spec</h2>
+<p>The exact query spec (endpoint, request/response shape, auth
+requirements, and known gaps in exclusion/bias filtering) is tracked
+internally rather than in this public repo — see the tracking issue for
+this case study.</p>
+<p>Cap each shortlist at ~10 candidates for review.</p>
+</div>
+<div id="expected-output" class="section level2">
+<h2>Expected output</h2>
+<p>A shortlist per persona: ranked candidates (name, affiliation,
+similarity score), with DGP/PI-flag and institution/DGP diversity
+checked manually since there’s no native filter for it. No topic-overlap
+explanation is returned by the underlying query — if reviewers want to
+sanity-check <em>why</em> a candidate matched, that means separately
+checking the candidate’s bibliography for topical overlap with the
+invented persona papers.</p>
+</div>
+<div id="validation-rubric-manual-review-once-shortlists-exist"
+class="section level2">
+<h2>Validation rubric (manual review, once shortlists exist)</h2>
+<p>For each candidate, reviewers rate 1–5: - <strong>Topical
+relevance</strong> — does the shared-topic evidence actually match the
+stated gap? - <strong>Seniority appropriateness</strong> — plausibly
+more senior/experienced in the gap area? - <strong>Cross-boundary
+value</strong> — different institution/DGP from the persona (the point
+of “niche” sourcing is reaching outside the persona’s existing network)?
+- <strong>Actionability</strong> — would a human matchmaker actually
+suggest this pairing without more information?</p>
+<p>A case study is “validated” if ≥2 of 3 reviewers rate ≥2 of the top-5
+candidates per persona at 4+ on all four axes. (Threshold is a starting
+proposal — revisit once we see real output; may be too strict or too
+loose.)</p>
+</div>
+<div id="non-kg-member-trainees-aim-ahead-etc." class="section level2">
+<h2>Non-KG-member trainees (AIM-AHEAD, etc.)</h2>
+<p>Confirmed workable per the All-Hands precedent: use their stated
+pitch/topic text as a direct query input without requiring a
+pre-existing KG node. Worth adding as an explicit 4th persona
+(non-member trainee) once the three above are validated, to confirm the
+same mechanism holds outside the event context.</p>
+</div>
+<div id="data-dependency" class="section level2">
+<h2>Data dependency</h2>
+<p>Needs role/career-stage onboarding data (career stage, institution
+type) to distinguish “junior seeking mentor” from “senior offering
+mentorship” at scale beyond these 3 hand-built personas — becomes more
+valuable once this case study is validated (to generalize past
+hand-picked personas).</p>
+</div>
+<div id="next-steps" class="section level2">
+<h2>Next steps</h2>
+<p>See the tracking issue for this case study for owner assignments, the
+backend query spec, and current status. Once shortlists come back: run
+the validation rubric above, then write up results (what worked, what
+the KG couldn’t do, what’s a hard blocker vs. fixable gap) back into
+this README — in particular whether the missing
+institution/DGP-exclusion and missing topic-overlap explanation turn out
+to be blockers for this use case or just cosmetic gaps.</p>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -506,6 +677,8 @@ footer is added to webpages before the MathJax javascript. -->
 
 
 
+</div>
+</div>
 
 </div>
 
@@ -538,6 +711,35 @@ $(document).ready(function () {
 
 <!-- code folding -->
 
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

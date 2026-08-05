@@ -11,7 +11,7 @@
 
 
 
-<title>License</title>
+<title>precision_interdisc_teaming.knit.md</title>
 
 <script src="site_libs/header-attrs-2.31/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -29,6 +29,9 @@
        h6 {font-size: 12px;}
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
@@ -229,6 +232,69 @@ $(document).ready(function () {
 
 
 
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
 
 </head>
 
@@ -236,6 +302,16 @@ $(document).ready(function () {
 
 
 <div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -273,7 +349,6 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">License</h1>
 
 </div>
 
@@ -281,7 +356,7 @@ $(document).ready(function () {
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-report" data-toggle="collapse" data-target="#workflowr-report">
 <span class="glyphicon glyphicon-list" aria-hidden="true"></span>
-workflowr <span class="glyphicon glyphicon-exclamation-sign text-danger"
+workflowr <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span>
 </button>
 </p>
@@ -292,8 +367,8 @@ aria-hidden="true"></span>
 </li>
 <li>
 <a data-toggle="tab" href="#checks"> Checks <span
-class="glyphicon glyphicon-exclamation-sign text-danger"
-aria-hidden="true"></span> </a>
+class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
+</a>
 </li>
 <li>
 <a data-toggle="tab" href="#versions">Past versions</a>
@@ -306,9 +381,9 @@ aria-hidden="true"></span> </a>
 </p>
 <p>
 <strong>Checks:</strong> <span
-class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 1
+class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 2
 <span class="glyphicon glyphicon-exclamation-sign text-danger"
-aria-hidden="true"></span> 1
+aria-hidden="true"></span> 0
 </p>
 <p>
 <strong>Knit directory:</strong> <code>b2ai-tkg-casestudy/</code> <span
@@ -331,21 +406,18 @@ versions</em> tab lists the development history.
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguncommittedchanges">
-<span class="glyphicon glyphicon-exclamation-sign text-danger"
-aria-hidden="true"></span> <strong>R Markdown file:</strong> uncommitted
-changes </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguptodate">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>R Markdown file:</strong> up-to-date
+</a>
 </p>
 </div>
-<div id="strongRMarkdownfilestronguncommittedchanges"
+<div id="strongRMarkdownfilestronguptodate"
 class="panel-collapse collapse">
 <div class="panel-body">
-<p>The R Markdown file has unstaged changes. To know which version of
-the R Markdown file created these results, you’ll want to first commit
-it to the Git repo. If you’re still working on the analysis, you can
-ignore this warning. When you’re finished, you can run
-<code>wflow_publish</code> to commit the R Markdown file and build the
-HTML.</p>
+<p>Great! Since the R Markdown file has been committed to the Git
+repository, you know the exact version of the code that produced these
+results.</p>
 </div>
 </div>
 </div>
@@ -408,11 +480,12 @@ have uncommitted changes.
 <div id="versions" class="tab-pane fade">
 <p>
 These are the previous versions of the repository in which changes were
-made to the R Markdown (<code>analysis/license.Rmd</code>) and HTML
-(<code>docs/license.html</code>) files. If you’ve configured a remote
-Git repository (see <code>?wflow_git_remote</code>), click on the
-hyperlinks in the table below to view the files as they were in that
-past version.
+made to the R Markdown
+(<code>analysis/precision_interdisc_teaming.Rmd</code>) and HTML
+(<code>docs/precision_interdisc_teaming.html</code>) files. If you’ve
+configured a remote Git repository (see <code>?wflow_git_remote</code>),
+click on the hyperlinks in the table below to view the files as they
+were in that past version.
 </p>
 <div class="table-responsive">
 <table class="table table-condensed table-hover">
@@ -441,33 +514,16 @@ Message
 Rmd
 </td>
 <td>
-<a href="https://github.com/jananiravi/b2ai-tkg-casestudy/blob/416d360988d700fdba5c8145e2fa26eb0024dbe4/analysis/license.Rmd" target="_blank">416d360</a>
+<a href="https://github.com/jananiravi/b2ai-tkg-casestudy/blob/77a2329827c4c2ec8e8e81199daa3f2e449d0ac8/analysis/precision_interdisc_teaming.Rmd" target="_blank">77a2329</a>
 </td>
 <td>
-GitHub
-</td>
-<td>
-2026-08-05
-</td>
-<td>
-Initial commit
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/jananiravi/b2ai-tkg-casestudy/416d360988d700fdba5c8145e2fa26eb0024dbe4/docs/license.html" target="_blank">416d360</a>
-</td>
-<td>
-GitHub
+Janani Ravi
 </td>
 <td>
 2026-08-05
 </td>
 <td>
-Initial commit
+Add draft: precision interdisciplinary teaming
 </td>
 </tr>
 </tbody>
@@ -477,13 +533,68 @@ Initial commit
 </div>
 </div>
 </div>
-<p>The code in this repository is licensed under the <a
-href="https://choosealicense.com/licenses/mit/">MIT License</a>, as
-recorded in the <code>LICENSE</code> file in the root of this repo
-(copyright JRaviLab, PI: Janani Ravi).</p>
-<p>The written content (case studies, analysis) on this site is licensed
-under a <a href="https://creativecommons.org/licenses/by/4.0/">Creative
-Commons Attribution 4.0 International License</a>.</p>
+<div id="case-study-2-precision-teaming-for-interdisciplinary-grants"
+class="section level1">
+<h1>Case study 2: Precision teaming for interdisciplinary grants</h1>
+<p>Status: <strong>draft — not yet scoped</strong></p>
+<div id="open-items-to-fill-in-together" class="section level2">
+<h2>Open items to fill in together</h2>
+<ul class="task-list">
+<li><label><input type="checkbox" />Persona: junior investigator
+preparing what kind of grant — an R01, a career-development award
+(K-series), an internal pilot? Affects how “team” is defined and what
+gaps matter.</label></li>
+<li><label><input type="checkbox" />Scenario / trigger: PI has domain
+expertise A, grant mechanism requires demonstrated capability in B and C
+— need to find a co-I/collaborator who covers the gap without
+duplicating existing team expertise.</label></li>
+<li><label><input type="checkbox" />KG query spec: likely needs (a) the
+PI’s own expertise profile [learn from articles, grant awards, webpage
+–&gt; learned keywords],</label>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>a target expertise gap,</li>
+<li>embedding-similarity search restricted to people <em>not</em>
+already close collaborators (to avoid recommending existing co-authors).
+Confirm whether <code>/matrix</code> or the base graph search supports a
+“co-authors of X” exclusion filter.</li>
+</ol></li>
+<li><label><input type="checkbox" />Expected output: prioritized
+candidate list with expertise overlap, institution, and prior B2AI/DGP
+affiliation (cross-institution matching may matter for interdisciplinary
+framing).</label></li>
+<li><label><input type="checkbox" />Validation: does this reproduce a
+known-good team formation retroactively (e.g., a funded B2AI grant’s
+actual co-I roster), or only prospectively?</label></li>
+<li><label><input type="checkbox" />Relationship to structural silo
+analysis (see tracking issue): that analysis already identifies
+institution-type × DGP and career-stage × DGP clustering — may directly
+inform which gaps are structurally likely to exist.</label></li>
+</ul>
+</div>
+<div id="second-angle-po-facing-framing" class="section level2">
+<h2>Second angle: PO-facing framing</h2>
+<p>Distinct from the junior-investigator persona above, but the same
+underlying query capability: connecting NIH/NSF/DOD program officers to
+appropriately-funded people — pulling from funded-grants/awards data
+(recent + earlier grantees) — as the justification for <em>why the
+Talent KG is worth having at all</em> to PIs and POs: reporting impact
+and bibliometric quantification of reach, not just team-formation
+utility.</p>
+<p>This should stay a second lens on the same case study rather than
+splinter into a separate one — the query mechanics (expertise-gap
+matching, cross-institution search) are shared; only the audience and
+the “so what” differ (junior PI assembling a team vs. a PO/funder
+wanting evidence the consortium’s talent network is producing
+cross-pollinated, fundable collaborations).</p>
+<p>Practical implication for scoping: once we draft the KG query spec
+below, write the “expected output” section with both audiences in mind —
+e.g. the same candidate list can be reframed as “co-I gap-fillers for PI
+X” or as “evidence of interdisciplinary teaming enabled by Bridge2AI”
+for a PO deck.</p>
+<p>See tracking issue for this case study for framing-discussion notes
+and status.</p>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -506,6 +617,8 @@ footer is added to webpages before the MathJax javascript. -->
 
 
 
+</div>
+</div>
 
 </div>
 
@@ -538,6 +651,35 @@ $(document).ready(function () {
 
 <!-- code folding -->
 
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

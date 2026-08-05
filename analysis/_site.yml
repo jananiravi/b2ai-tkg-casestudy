@@ -1,7 +1,7 @@
-name: "New Project"
+name: "Bridge2AI Talent KG Case Studies"
 output_dir: ../docs
 navbar:
-  title: "New Project"
+  title: "Bridge2AI Talent KG Case Studies"
   left:
   - text: Home
     href: index.html
