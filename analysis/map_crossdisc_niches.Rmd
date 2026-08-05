@@ -1,0 +1,28 @@
+# Case study 3: Mapping and dominating cross-disciplinary niches
+
+Status: **draft — not yet scoped**
+
+## Open items to fill in together
+
+- [ ] Persona: is this framed for an individual researcher ("where's an under-served
+      niche I could credibly move into?") or for consortium/program leadership
+      ("where are our structural gaps as an organization")?
+- [ ] Scenario / trigger: what decision does this inform — an individual's next
+      research direction, or a strategic hire/recruitment target for the consortium?
+      Can the junior researcher leverage the talent graph to identify appropriate
+      collaborators and set up their niche and independent research program? This
+      might involve helping them identify directions and planning their first R01, for example.
+- [ ] "Dominating a niche" — needs an operational definition. Candidate framings:
+      low node density in embedding space + high citation growth in the surrounding
+      area (an emerging, under-crowded topic); or a 2D region of the SPECTER2/t-SNE
+      layout with few Bridge2AI nodes but high adjacent external activity.
+- [ ] KG query spec: this is the one case study that plausibly needs the *layout*
+      data directly rather than just node search — confirm whether that's queryable
+      without the live app, or only through it.
+- [ ] Expected output: a ranked list of "niche" coordinates/topics with sparse
+      Bridge2AI coverage, evidence of external field growth, and which Bridge2AI
+      members are nearest (bridgeable) to each.
+- [ ] Validation: cross-check against the expertise-gap analysis on the survey side
+      (see tracking issue) — a coverage-gap analysis (TF-IDF/LDA-based coverage
+      heatmap, gap <5% threshold) — worth checking whether it agrees with what the KG
+      embedding space shows.
