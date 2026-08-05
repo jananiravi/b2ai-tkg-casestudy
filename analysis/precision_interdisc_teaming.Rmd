@@ -1,0 +1,47 @@
+# Case study 2: Precision teaming for interdisciplinary grants
+
+Status: **draft — not yet scoped**
+
+## Open items to fill in together
+
+- [ ] Persona: junior investigator preparing what kind of grant —
+      an R01, a career-development award (K-series), an internal pilot? Affects how
+      "team" is defined and what gaps matter.
+- [ ] Scenario / trigger: PI has domain expertise A, grant mechanism requires
+      demonstrated capability in B and C — need to find a co-I/collaborator who covers
+      the gap without duplicating existing team expertise.
+- [ ] KG query spec: likely needs (a) the PI's own expertise profile [learn from articles, grant awards, webpage --> learned keywords],
+  (b) a target expertise gap,
+  (c) embedding-similarity search restricted to people *not*
+      already close collaborators (to avoid recommending existing co-authors). Confirm
+      whether `/matrix` or the base graph search supports a "co-authors of X" exclusion
+      filter.
+- [ ] Expected output: prioritized candidate list with expertise overlap, institution, and prior
+      B2AI/DGP affiliation (cross-institution matching may matter for interdisciplinary
+      framing).
+- [ ] Validation: does this reproduce a known-good team formation retroactively (e.g.,
+      a funded B2AI grant's actual co-I roster), or only prospectively?
+- [ ] Relationship to structural silo analysis (see tracking issue): that
+      analysis already identifies institution-type × DGP and career-stage × DGP
+      clustering — may directly inform which gaps are structurally likely to exist.
+
+## Second angle: PO-facing framing
+
+Distinct from the junior-investigator persona above, but the same underlying query
+capability: connecting NIH/NSF/DOD program officers to appropriately-funded people —
+pulling from funded-grants/awards data (recent + earlier grantees) — as the
+justification for *why the Talent KG is worth having at all* to PIs and POs: reporting
+impact and bibliometric quantification of reach, not just team-formation utility.
+
+This should stay a second lens on the same case study rather than splinter into a
+separate one — the query mechanics (expertise-gap matching, cross-institution search)
+are shared; only the audience and the "so what" differ (junior PI assembling a team vs.
+a PO/funder wanting evidence the consortium's talent network is producing cross-pollinated,
+fundable collaborations).
+
+Practical implication for scoping: once we draft the KG query spec below, write the
+"expected output" section with both audiences in mind — e.g. the same candidate list
+can be reframed as "co-I gap-fillers for PI X" or as "evidence of interdisciplinary
+teaming enabled by Bridge2AI" for a PO deck.
+
+See tracking issue for this case study for framing-discussion notes and status.
