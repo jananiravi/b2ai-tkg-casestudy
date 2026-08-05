@@ -1,0 +1,135 @@
+# Case study 1: Sourcing niche mentorship & wrap-around support
+
+Status: **scoped — API call identified, ready for someone with backend access to run**
+
+## Scope (decided 2026-07-24)
+
+Standing, general scenario — not tied to a specific event. Persona: an early-career
+researcher (ECR/trainee), at any point in time, whose local institution lacks mentorship
+in a specific skill or standard they need. The All-Hands lightning-pitch matching (see
+`notes/context.md`) is precedent/evidence that this is workable, not the scope itself.
+
+**Validation approach**: manual expert review of shortlists generated from synthetic
+personas (no real-person consent needed for a first pass) — Moni/Vikram/Janani judge
+relevance once Zhandos or Jiawei runs the queries below through ORCID-authenticated
+access.
+
+## Synthetic test personas
+
+Each is deliberately cross-DGP / cross-institution-type, since "niche" mentorship is
+precisely the case where the right mentor is unlikely to be at the same institution or
+in the same DGP.
+
+**Persona A — wet-lab-to-ML gap.**
+Postdoc, CM4AI, wet-lab genomics/proteomics background, first time needing to apply
+ML/AI-readiness standards (e.g., FAIRSCAPE-style data packaging) to her own data. Non-R1
+institution. Needs: a mentor who has *actually done* AI-readiness standardization on
+biological data, not just a computational person in general.
+
+**Persona B — clinical-to-governance gap.**
+Clinical fellow, CHoRUS or AI-READi, strong clinical/EHR data background, PI is asking
+them to help draft a data governance / responsible-AI section of a paper or protocol.
+Healthcare/clinical institution type. Needs: a mentor with ELSI/data-governance
+publication history, ideally with prior Bridge2AI-standards authorship (the 54-paper set
+in `notes/context.md` is a natural candidate pool).
+
+**Persona C — grant-writing-translation gap.**
+Early-career data scientist, Voice DGP, technically strong, has never co-written an
+interdisciplinary grant with a clinical partner. Needs: a mentor who has bridged
+clinical + technical co-authorship across institutions before (i.e., has demonstrable
+cross-institution, cross-DGP collaboration in their own publication history) — someone
+who can teach the *process*, not just supply domain content.
+
+## KG query spec (for Zhandos/Jiawei to execute)
+
+**Exact path, confirmed from `cm4ai-bot`'s README** (2026-07-27): since none of the three
+synthetic personas is an actual KG node, the right entry point is the same one the app
+uses for newly-onboarded authors, not the node-click "Find Teaming Opportunities" UI
+flow (that one requires an existing `aid`):
+
+```
+POST /api/author-preview
+Body: { full_name, affiliation, papers: [{ title, journal?, year?, doi?, url? }], top_k? }
+```
+
+- Backend batch-encodes the `papers` titles with SPECTER2, takes the mean vector as the
+  persona's embedding, and runs it against the FAISS index — same mechanism the app uses
+  to place a real newly-added author on the atlas.
+- For each persona, `papers` should be a handful of representative title-like strings
+  standing in for their stated expertise + gap (there's no free-text "describe yourself"
+  field — it only accepts a papers list, so the persona's expertise needs to be encoded
+  as invented-but-plausible paper titles, e.g. "FAIRSCAPE-style data packaging for
+  proteomics" for Persona A).
+- Response: de-duplicated nearest static author ids with a normalized similarity score
+  and name/affiliation metadata — no topic/expertise labels are surfaced (confirms no
+  curated affinity-tag layer exists yet, per `notes/context.md`).
+- Record, per candidate: name, institution, similarity score. DGP affiliation and PI flag
+  are **not** in this response — those would need a manual second lookup against
+  `author_metadata.json`/the admin catalog per candidate id.
+
+**Cross-institution/DGP exclusion — confirmed NOT supported.** The only built-in
+exclusion is *already-known collaborators*, via `GET /api/collaborators/{aid}` — and
+that only works for an existing `aid`, which none of these synthetic personas have. So
+for `/api/author-preview` there is no automatic exclusion of any kind; institution/DGP
+diversity in the results is not enforced and must be filtered manually after the fact by
+the reviewer.
+
+**Onboarding-data / mentorship-history bias — confirmed NOT wired in.** The
+recommendation is pure SPECTER2-embedding similarity over paper titles; there is no
+signal in `cm4ai-bot` for "has mentored before," career stage, or anything from
+`b2ai_survey`'s onboarding data. If we want that, it has to happen as a manual
+post-filter step on our side (join returned candidate names/affiliations against
+`career_stage_simple` from `b2ai_data`), not something to ask Zhandos/Jiawei to change
+in the pipeline for this case study.
+
+Cap each shortlist at ~10 candidates (`top_k=10`) for review.
+
+## Expected output
+
+A shortlist per persona: ranked candidates (name, affiliation, similarity score) from
+`/api/author-preview`, with DGP/PI-flag looked up manually per candidate, and
+institution/DGP diversity checked manually since there's no native filter for it. No
+topic-overlap explanation is returned by the API — if reviewers want to sanity-check
+*why* a candidate matched, that means separately checking the candidate's bibliography
+for topical overlap with the invented persona papers.
+
+## Validation rubric (manual review, once shortlists exist)
+
+For each candidate, reviewer (Moni/Vikram/Janani) rates 1–5:
+- **Topical relevance** — does the shared-topic evidence actually match the stated gap?
+- **Seniority appropriateness** — plausibly more senior/experienced in the gap area?
+- **Cross-boundary value** — different institution/DGP from the persona (the point of
+  "niche" sourcing is reaching outside the persona's existing network)?
+- **Actionability** — would a human matchmaker actually suggest this pairing without
+  more information?
+
+A case study is "validated" if ≥2 of 3 reviewers rate ≥2 of the top-5 candidates per
+persona at 4+ on all four axes. (Threshold is a starting proposal — revisit once we see
+real output; may be too strict or too loose.)
+
+## Non-KG-member trainees (AIM-AHEAD, etc.)
+
+Confirmed workable per the All-Hands precedent: use their stated pitch/topic text as a
+direct query input without requiring a pre-existing KG node. Worth adding as an explicit
+4th persona (non-member trainee) once the three above are validated, to confirm the same
+mechanism holds outside the event context.
+
+## Data dependency
+
+Needs role/career-stage data from `b2ai_survey` onboarding data
+(`career_stage_simple`, `institution_type`) to distinguish "junior seeking mentor" from
+"senior offering mentorship" at scale beyond these 3 hand-built personas — this is the
+7/22 action item Janani owes, and becomes more valuable once this case study is
+validated (to generalize past hand-picked personas).
+
+## Next steps
+
+1. Janani: hand this spec to Zhandos/Jiawei — this is a direct `POST /api/author-preview`
+   call against the `cm4ai-bot` backend (needs `BRIDGE_INTERNAL_API_TOKEN` / a running
+   instance, not ORCID sign-in specifically — worth confirming they can run it from a
+   script rather than only through the UI).
+2. Once shortlists come back: circulate to Moni/Vikram for the validation rubric above.
+3. Write up results (what worked, what the KG couldn't do, what's a hard blocker vs.
+   fixable gap) back into this README — in particular whether the missing
+   institution/DGP-exclusion and missing topic-overlap explanation turn out to be
+   blockers for this use case or just cosmetic gaps.
