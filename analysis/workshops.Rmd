@@ -1,0 +1,15 @@
+---
+title: "Workshops"
+output:
+  workflowr::wflow_html:
+    toc: false
+editor_options:
+  chunk_output_type: console
+---
+
+Grad/postdoc feedback sessions testing the case study personas above — two ~1-hour,
+facilitator-led sessions with the same group.
+
+* [Workshop session 1: mentorship & precision teaming](workshop_session1.html)
+* [Workshop session 2: cross-disciplinary niches & synthesis](workshop_session2.html)
+* [Workshop feedback form content](workshop_feedback_form.html)

@@ -2,7 +2,7 @@
 
 Status: **scoped — API call identified, ready for someone with backend access to run**
 
-## Scope (decided 2026-07-24)
+## Scope
 
 Standing, general scenario — not tied to a specific event. Persona: an early-career
 researcher (ECR/trainee), at any point in time, whose local institution lacks mentorship
@@ -12,6 +12,12 @@ in a specific skill or standard they need. The All-Hands lightning-pitch matchin
 **Validation approach**: manual expert review of shortlists generated from synthetic
 personas (no real-person consent needed for a first pass). See tracking issue for
 reviewer assignments and backend query execution.
+
+**Workshop use**: these three personas are the discussion basis for
+[Workshop session 1](workshop_session1.html) of the grad/postdoc feedback sessions —
+they're already framed as the intended end users (ECR/trainee), so the workshop question
+for each is "does this feel like a real gap you've had, and would this shortlist
+actually help?" rather than "is this the right persona at all."
 
 ## Synthetic test personas
 
@@ -55,9 +61,12 @@ filter for it. No topic-overlap explanation is returned by the underlying query 
 reviewers want to sanity-check *why* a candidate matched, that means separately checking
 the candidate's bibliography for topical overlap with the invented persona papers.
 
-## Validation rubric (manual review, once shortlists exist)
+## Validation rubric
+
+*Manual review, once shortlists exist.*
 
 For each candidate, reviewers rate 1–5:
+
 - **Topical relevance** — does the shared-topic evidence actually match the stated gap?
 - **Seniority appropriateness** — plausibly more senior/experienced in the gap area?
 - **Cross-boundary value** — different institution/DGP from the persona (the point of
@@ -69,7 +78,9 @@ A case study is "validated" if ≥2 of 3 reviewers rate ≥2 of the top-5 candid
 persona at 4+ on all four axes. (Threshold is a starting proposal — revisit once we see
 real output; may be too strict or too loose.)
 
-## Non-KG-member trainees (AIM-AHEAD, etc.)
+## Non-KG-member trainees
+
+*E.g. AIM-AHEAD and similar non-Bridge2AI trainee programs.*
 
 Confirmed workable per the All-Hands precedent: use their stated pitch/topic text as a
 direct query input without requiring a pre-existing KG node. Worth adding as an explicit

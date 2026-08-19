@@ -1,0 +1,136 @@
+---
+title: "Workshop session 2: cross-disciplinary niches & synthesis"
+output:
+  workflowr::wflow_html:
+    toc: false
+editor_options:
+  chunk_output_type: console
+---
+
+Facilitator guide for a grad/postdoc feedback session on the Bridge2AI Talent Knowledge
+Graph (KG) case studies. Designed to be run by any facilitator(s), in any setting,
+without prior context beyond this page. Second of two ~1-hour sessions, same group as
+[Workshop session 1](workshop_session1.html).
+
+## Audience
+
+Same group as session 1 — graduate students and postdocs, ~15–30 attendees.
+
+## What this session covers
+
+[Case study 3](map_crossdisc_niches.html) (persona now decided, other items still
+open — expect a more exploratory discussion than session 1) plus a cross-cutting
+synthesis across all three case studies.
+
+## Pre-event setup (send ahead)
+
+- Email attendees a link to `map_crossdisc_niches.html` a few days before (same
+  optional-skim framing as session 1's pre-read).
+- If a different facilitator is running this session than session 1, get the compiled
+  session 1 notes/form responses beforehand — the opening recap depends on them.
+- Confirm the structured feedback form (built for session 1) is still open and
+  accepting responses — this session adds to the same form, it doesn't need a new one.
+
+## Day-of setup
+
+- Print or project: the Case study 3 persona summary (one page).
+- Have 1–2 themes from session 1 ready to state at the open (pulled from the compiled
+  session 1 notes/form).
+- Same breakout groups as session 1, if attendee list is unchanged; re-form only as
+  needed for no-shows/new attendees.
+
+## Materials to print or share
+
+- `map_crossdisc_niches.html` (email, pre-event).
+- One-page Case study 3 persona summary (print or project, day-of).
+- Same structured-form link/QR code from session 1 — content at [Workshop feedback form
+  content](workshop_feedback_form.html), sections 3–4 for this session.
+
+## Forms
+
+Same two tracks and same form as session 1: facilitator notes (free-form, using the
+prompts below as a checklist) and the structured form from [Workshop feedback form
+content](workshop_feedback_form.html) (sections 3–4 for this session), filled out live.
+One continuous form across both sessions, not a separate one, so all responses land in
+one place.
+
+## Agenda
+
+| Time | Segment |
+|---|---|
+| 0:00–0:05 | Recap: 1–2 themes from session 1 |
+| 0:05–0:10 | Recap: Case study 3 persona (niche-seeking grad student/postdoc) |
+| 0:10–0:25 | Breakout: Case study 3 discussion |
+| 0:25–0:30 | Structured form: Case study 3 |
+| 0:30–0:50 | Breakout: cross-cutting synthesis discussion (all three case studies) |
+| 0:50–0:55 | Structured form: synthesis |
+| 0:55–1:00 | Wrap + next steps |
+
+Same breakout groups as session 1.
+
+## Case study 3: mapping cross-disciplinary niches — discussion block
+
+**Recap (live, ~2 min):** persona is a grad student/postdoc nearing research
+independence, setting up their first independent direction (e.g. planning a first
+R01/K-award), wanting to find an under-served niche adjacent to their expertise and the
+Bridge2AI members close enough to be early collaborators there. Note for the room: unlike
+case studies 1–2, "dominating a niche" doesn't have an agreed operational definition yet
+— this session's discussion is part of how we get to one. Full text in
+`map_crossdisc_niches.html`.
+
+**Breakout prompts:**
+
+- Does "finding an under-served niche adjacent to my expertise" describe a real decision
+  you've faced or expect to face — picking a research direction, not just picking a
+  mentor or co-I?
+- Two candidate definitions of "dominating a niche" are on the table: (a) low
+  competition + high citation growth nearby (an emerging, uncrowded topic), or (b) a
+  region of the field with few Bridge2AI members but lots of adjacent outside activity.
+  Which of these actually matches how you'd think about choosing a niche — or neither?
+- If the KG could show you "Bridge2AI members closest to this open niche," would that
+  change who you'd reach out to, versus finding collaborators the way you do now?
+
+**Structured form questions (see form-content page for the canonical version):**
+
+1. Have you faced (or do you expect to face) a "pick my own research niche" decision,
+   distinct from picking a mentor or grant co-I? (yes / not yet, but expect to / no)
+2. Which definition of "dominating a niche" matches your own thinking — (a) low
+   competition + high growth, (b) few Bridge2AI members + high adjacent outside
+   activity, (c) neither — describe your own (free text)
+3. On a 1–5 scale, how useful would a ranked list of "open niches near you, with nearest
+   bridgeable collaborators" be for choosing a research direction?
+
+## Cross-cutting synthesis — discussion block
+
+**Framing (live, ~2 min):** step back from individual personas — across all three case
+studies (mentorship, teaming, niches), the underlying KG capability is the same
+similarity/embedding search over people and topics. This block is about whether that
+single capability, delivered three different ways, actually covers what attendees need.
+
+**Breakout prompts:**
+
+- Across the three case studies, which single one would you actually use first, and
+  why?
+- Is there a use case the KG *should* support for someone at your career stage that
+  none of the three personas capture?
+- All three outputs are ranked lists with a similarity score and no explanation of *why*
+  something matched. Is that a blocker for you, or good enough to act on?
+
+**Structured form questions (see form-content page for the canonical version):**
+
+1. Which of the three case studies would you use first? (single choice: mentorship /
+   teaming / niches / none of them)
+2. Is there a use case missing that you'd want the KG to support? (free text)
+3. On a 1–5 scale, how much does the lack of a "why this matched" explanation limit how
+   useful you'd find any of these three tools?
+
+## Wrap
+
+Thank attendees, confirm the structured form was submitted by everyone.
+
+## Follow-up
+
+Facilitators synthesize the compiled notes + form responses from both sessions back into
+each case study's page (what worked, what's a hard KG blocker vs. a fixable gap). This
+is a follow-up item to do after both sessions, not something to resolve live in the
+room.

@@ -1,47 +1,86 @@
 # Case study 2: Precision teaming for interdisciplinary grants
 
-Status: **draft — not yet scoped**
+Status: **draft — scoped, query spec pending backend confirmation**
 
-## Open items to fill in together
+## Scope
 
-- [ ] Persona: junior investigator preparing what kind of grant —
-      an R01, a career-development award (K-series), an internal pilot? Affects how
-      "team" is defined and what gaps matter.
-- [ ] Scenario / trigger: PI has domain expertise A, grant mechanism requires
-      demonstrated capability in B and C — need to find a co-I/collaborator who covers
-      the gap without duplicating existing team expertise.
-- [ ] KG query spec: likely needs (a) the PI's own expertise profile [learn from articles, grant awards, webpage --> learned keywords],
-  (b) a target expertise gap,
-  (c) embedding-similarity search restricted to people *not*
-      already close collaborators (to avoid recommending existing co-authors). Confirm
-      whether `/matrix` or the base graph search supports a "co-authors of X" exclusion
-      filter.
-- [ ] Expected output: prioritized candidate list with expertise overlap, institution, and prior
-      B2AI/DGP affiliation (cross-institution matching may matter for interdisciplinary
-      framing).
-- [ ] Validation: does this reproduce a known-good team formation retroactively (e.g.,
-      a funded B2AI grant's actual co-I roster), or only prospectively?
-- [ ] Relationship to structural silo analysis (see tracking issue): that
-      analysis already identifies institution-type × DGP and career-stage × DGP
-      clustering — may directly inform which gaps are structurally likely to exist.
+Junior investigator preparing an R01 or a career-development (K-series) award. The
+gap-team-formation mechanism doesn't change between the two mechanisms — only the scale
+and seniority expected of the co-I who fills the gap. Scenario/trigger: PI has domain
+expertise A, the grant mechanism requires demonstrated capability in B and C, and the PI
+needs a co-I/collaborator who covers the gap without duplicating expertise already on
+the team.
 
-## Second angle: PO-facing framing
+Per tracking issue #2, the PO-facing angle below is a second lens on this same query
+capability, not a separate case study — same query mechanics, different audience and
+"so what."
 
-Distinct from the junior-investigator persona above, but the same underlying query
-capability: connecting NIH/NSF/DOD program officers to appropriately-funded people —
-pulling from funded-grants/awards data (recent + earlier grantees) — as the
-justification for *why the Talent KG is worth having at all* to PIs and POs: reporting
-impact and bibliometric quantification of reach, not just team-formation utility.
+**Workshop use**: Persona A (junior PI) is the one to run as a grad/postdoc discussion
+prompt in [Workshop session 1](workshop_session1.html) — postdocs preparing a first
+K-series or R01 submission are a direct match for this persona. Persona B (PO/funder) is
+background context for why the case study matters, not a workshop discussion prompt —
+grad/postdoc attendees aren't the audience for the bibliometric-impact framing.
 
-This should stay a second lens on the same case study rather than splinter into a
-separate one — the query mechanics (expertise-gap matching, cross-institution search)
-are shared; only the audience and the "so what" differ (junior PI assembling a team vs.
-a PO/funder wanting evidence the consortium's talent network is producing cross-pollinated,
-fundable collaborations).
+## Personas
 
-Practical implication for scoping: once we draft the KG query spec below, write the
-"expected output" section with both audiences in mind — e.g. the same candidate list
-can be reframed as "co-I gap-fillers for PI X" or as "evidence of interdisciplinary
-teaming enabled by Bridge2AI" for a PO deck.
+**Persona A — junior PI, grant co-I gap-filling.**
+Early-career PI with strong domain expertise in one area, preparing an R01/K-series
+submission that requires demonstrated capability in one or two areas outside their own
+background. Needs: a co-I who plausibly covers the gap, is not already a close
+collaborator (the point is finding new team capacity, not re-listing existing
+co-authors), and ideally brings cross-institution/cross-DGP diversity to the
+interdisciplinary framing.
 
-See tracking issue for this case study for framing-discussion notes and status.
+**Persona B — program officer / funder, bibliometric-impact case.**
+NIH/NSF/DOD program officer (or Bridge2AI leadership building the case for the KG
+itself) wanting evidence that the consortium's talent network produces cross-pollinated,
+fundable collaborations — pulling from funded-grants/awards data (recent and earlier
+grantees) and citation/publication reach, not team-formation per se.
+
+## KG query spec
+
+Three data/query needs, surfaced from the draft and issue #2:
+
+- **PI's own expertise profile** — learned from the PI's articles, grant awards, and
+  webpage-derived keywords (not a manually-entered profile).
+- **Co-author exclusion** — embedding-similarity search restricted to people *not*
+  already close collaborators of the PI, so the KG doesn't just recommend existing
+  co-authors as "new" team members. Case study 1 found that the only confirmed
+  exclusion mechanism in `cm4ai-bot` is `GET /api/collaborators/{aid}`, and only for an
+  existing `aid` — the likely mechanism here too, but needs confirmation for the PI
+  case specifically (a real KG member, unlike case study 1's synthetic personas).
+- **Funded-grants/awards data** (recent + earlier grantees) for the PO-facing
+  bibliometric angle — reach/impact reporting, not similarity search.
+
+Exact endpoint names, auth requirements, and response shapes are tracked in issue #2,
+not this public repo.
+
+## Expected output
+
+Same underlying candidate list, reframed per audience:
+
+- **Junior-PI framing**: prioritized candidate list with expertise-gap overlap,
+  institution, and prior B2AI/DGP affiliation — "co-I gap-fillers for PI X."
+- **PO framing**: the same match mechanics presented as "evidence of interdisciplinary
+  teaming enabled by Bridge2AI" — for a funder-facing deck, not a working shortlist.
+
+## Validation
+
+Primary check: retrospective — does the query reproduce a known-good team formation,
+i.e. a funded B2AI grant's actual co-I roster, when run against the PI's pre-award
+expertise profile? Prospective validation (does it surface *new*, not-yet-collaborating
+co-Is a PI would plausibly accept) is a stretch goal once retrospective validation
+passes.
+
+## Relationship to structural silo analysis
+
+See tracking issue for this case study: the `b2ai_survey` structural silo analysis
+already identifies institution-type × DGP and career-stage × DGP clustering — may
+directly inform which gaps are structurally likely to exist.
+
+## Next steps
+
+See tracking issue #2 for query-spec confirmation and owner assignments. Concrete next
+action: confirm with backend access (a) whether the co-author-exclusion filter works for
+a real KG member's `aid` the way it does for case study 1's synthetic-persona flow, and
+(b) the funded-grants/awards data source for the PO-facing angle.

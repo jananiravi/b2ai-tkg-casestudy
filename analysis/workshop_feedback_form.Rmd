@@ -1,0 +1,91 @@
+---
+title: "Workshop feedback form content"
+output:
+  workflowr::wflow_html:
+    toc: false
+editor_options:
+  chunk_output_type: console
+---
+
+Consolidated question set for the structured, live-fill feedback form used in
+[Workshop session 1](workshop_session1.html) and [Workshop session 2](workshop_session2.html).
+One form, filled by each attendee during the session (not after) — build this in
+Google Forms (or equivalent) directly from the sections below before session 1.
+
+Order follows the academic/clinical personas first, program-officer framing later:
+Case study 1 (mentorship) → Case study 2, Persona A only (academic PI) → Case study 3
+(niche-seeking researcher) → cross-cutting synthesis. Case study 2's Persona B
+(program officer / funder) is intentionally **not** in this form — that angle comes
+later, once a real grant/persona is chosen (see issue #2), not as part of this
+grad/postdoc round.
+
+A short "who are you" block up front lets the two facilitator tracks (notes + form) be
+cross-referenced later without collecting names.
+
+## 0. About you (once, at the start)
+
+1. Career stage — *single choice*: grad student / postdoc / other
+2. Discipline — *free text*: (e.g. wet-lab genomics, clinical/EHR, ML/data science,
+   ELSI/governance)
+3. Institution type — *single choice*: R1 / non-R1 / clinical or healthcare institution /
+   other
+4. Bridge2AI DGP affiliation, if any — *free text or "none"*
+
+## 1. Case study 1 — niche mentorship
+
+Recap: three synthetic personas — wet-lab-to-ML gap (A), clinical-to-governance gap (B),
+grant-writing-translation gap (C).
+
+1. Which persona is closest to a real gap you've experienced? — *single choice*:
+   A / B / C / none, describe your own (*free text follow-up if "none"*)
+2. How useful would a 10-person ranked shortlist (name, affiliation, similarity score
+   only, no explanation of why they matched) be for finding a mentor for that gap? —
+   *1–5 scale* (1 = not useful, 5 = very useful)
+3. What's missing from the persona descriptions that would make them more realistic? —
+   *free text*
+
+## 2. Case study 2 — precision teaming (Persona A: academic PI only)
+
+Recap: junior PI preparing an R01 or K-series award, needs a co-I who covers a
+capability gap without duplicating existing team expertise, and who isn't already a
+close collaborator.
+
+1. Have you needed (or do you expect to need) a co-I to fill a specific capability gap
+   for a grant application? — *single choice*: yes / not yet, but expect to / no
+2. How much does it matter that suggested co-Is are *not* already your collaborators? —
+   *1–5 scale*
+3. How much does cross-institution/cross-DGP diversity matter in that suggestion? —
+   *1–5 scale*
+
+## 3. Case study 3 — cross-disciplinary niches
+
+Recap: grad student/postdoc setting up their first independent research direction,
+looking for an under-served niche adjacent to their expertise and nearby Bridge2AI
+members to bridge into it.
+
+1. Have you faced (or do you expect to face) a "pick my own research niche" decision,
+   distinct from picking a mentor or grant co-I? — *single choice*: yes / not yet, but
+   expect to / no
+2. Which definition of "dominating a niche" matches your own thinking? — *single
+   choice*: (a) low competition + high citation growth nearby / (b) few Bridge2AI
+   members + high adjacent outside activity / (c) neither — describe your own (*free
+   text follow-up if "c"*)
+3. How useful would a ranked list of "open niches near you, with nearest bridgeable
+   collaborators" be for choosing a research direction? — *1–5 scale*
+
+## 4. Cross-cutting synthesis
+
+1. Which of the three case studies would you use first? — *single choice*: mentorship /
+   teaming / niches / none of them
+2. Is there a use case missing that you'd want the KG to support? — *free text*
+3. How much does the lack of a "why this matched" explanation limit how useful you'd
+   find any of these three tools? — *1–5 scale*
+
+## Notes for whoever builds the form
+
+- Keep section 0 short — it's only there to let facilitator notes and form responses be
+  cross-referenced by career stage/discipline, not to identify individuals.
+- All "single choice" questions with a free-text fallback (1.1, 3.2) should show the
+  free-text box conditionally, only when the fallback option is picked.
+- 1–5 scale questions: label both ends (1 = not useful / doesn't matter, 5 = very useful
+  / matters a lot) so responses are comparable across questions.
