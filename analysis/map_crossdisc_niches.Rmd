@@ -1,17 +1,30 @@
 # Case study 3: Mapping and dominating cross-disciplinary niches
 
-Status: **draft — not yet scoped**
+Status: **draft — persona decided, other items still open**
 
-## Open items to fill in together
+## Persona
 
-- [ ] Persona: is this framed for an individual researcher ("where's an under-served
-      niche I could credibly move into?") or for consortium/program leadership
-      ("where are our structural gaps as an organization")?
-- [ ] Scenario / trigger: what decision does this inform — an individual's next
-      research direction, or a strategic hire/recruitment target for the consortium?
-      Can the junior researcher leverage the talent graph to identify appropriate
-      collaborators and set up their niche and independent research program? This
-      might involve helping them identify directions and planning their first R01, for example.
+Individual-researcher framing: "where's an under-served niche I could credibly move
+into?" — not the consortium/program-leadership framing ("where are our structural gaps
+as an organization"). Chosen to match the audience for the grad/postdoc workshop
+feedback sessions (see [Workshop session 2](workshop_session2.html)) and to stay
+consistent with case studies 1 and 2's persona framing.
+
+**Persona — niche-seeking grad student/postdoc.**
+A grad student or postdoc nearing research independence, setting up their first
+independent research direction (e.g., planning a first R01/K-award). Wants to find an
+under-served niche adjacent to their current expertise rather than crowd into an
+already-saturated area, and wants to know which Bridge2AI members are close enough
+(bridgeable) to be early collaborators in that niche.
+
+## Scenario / trigger
+
+Informs an individual's next research direction, not a consortium hiring/recruitment
+decision — the junior researcher uses the talent graph to identify a defensible niche
+and appropriate early collaborators while setting up their independent program.
+
+## Open items still to fill in together
+
 - [ ] "Dominating a niche" — needs an operational definition. Candidate framings:
       low node density in embedding space + high citation growth in the surrounding
       area (an emerging, under-crowded topic); or a 2D region of the SPECTER2/t-SNE

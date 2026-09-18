@@ -255,6 +255,50 @@ $(document).ready(function () {
         <li>
   <a href="index.html">Home</a>
 </li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Case studies
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="case_studies.html">Overview</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="niche_mentorship.html">1. Sourcing niche mentorship</a>
+    </li>
+    <li>
+      <a href="precision_interdisc_teaming.html">2. Precision interdisciplinary teaming</a>
+    </li>
+    <li>
+      <a href="map_crossdisc_niches.html">3. Mapping cross-disciplinary niches</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Workshops
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="workshops.html">Overview</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="workshop_session1.html">Session 1: mentorship &amp; precision teaming</a>
+    </li>
+    <li>
+      <a href="workshop_session2.html">Session 2: cross-disciplinary niches &amp; synthesis</a>
+    </li>
+    <li>
+      <a href="workshop_feedback_form.html">Feedback form content</a>
+    </li>
+  </ul>
+</li>
 <li>
   <a href="about.html">About</a>
 </li>
@@ -281,7 +325,7 @@ $(document).ready(function () {
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-report" data-toggle="collapse" data-target="#workflowr-report">
 <span class="glyphicon glyphicon-list" aria-hidden="true"></span>
-workflowr <span class="glyphicon glyphicon-exclamation-sign text-danger"
+workflowr <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span>
 </button>
 </p>
@@ -292,8 +336,8 @@ aria-hidden="true"></span>
 </li>
 <li>
 <a data-toggle="tab" href="#checks"> Checks <span
-class="glyphicon glyphicon-exclamation-sign text-danger"
-aria-hidden="true"></span> </a>
+class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
+</a>
 </li>
 <li>
 <a data-toggle="tab" href="#versions">Past versions</a>
@@ -302,13 +346,13 @@ aria-hidden="true"></span> </a>
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2026-08-05
+<strong>Last updated:</strong> 2026-08-19
 </p>
 <p>
 <strong>Checks:</strong> <span
-class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 1
+class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 2
 <span class="glyphicon glyphicon-exclamation-sign text-danger"
-aria-hidden="true"></span> 1
+aria-hidden="true"></span> 0
 </p>
 <p>
 <strong>Knit directory:</strong> <code>b2ai-tkg-casestudy/</code> <span
@@ -331,36 +375,33 @@ versions</em> tab lists the development history.
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguncommittedchanges">
-<span class="glyphicon glyphicon-exclamation-sign text-danger"
-aria-hidden="true"></span> <strong>R Markdown file:</strong> uncommitted
-changes </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguptodate">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>R Markdown file:</strong> up-to-date
+</a>
 </p>
 </div>
-<div id="strongRMarkdownfilestronguncommittedchanges"
+<div id="strongRMarkdownfilestronguptodate"
 class="panel-collapse collapse">
 <div class="panel-body">
-<p>The R Markdown file has unstaged changes. To know which version of
-the R Markdown file created these results, you’ll want to first commit
-it to the Git repo. If you’re still working on the analysis, you can
-ignore this warning. When you’re finished, you can run
-<code>wflow_publish</code> to commit the R Markdown file and build the
-HTML.</p>
+<p>Great! Since the R Markdown file has been committed to the Git
+repository, you know the exact version of the code that produced these
+results.</p>
 </div>
 </div>
 </div>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomjananiravib2aitkgcasestudytree56c6ff32baecc0bec3fc976954a1d287312a9318targetblank56c6ff3a">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomjananiravib2aitkgcasestudytreeba24624bbb234d21d887ff89c2c33bde200063cftargetblankba24624a">
 <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span> <strong>Repository version:</strong>
-<a href="https://github.com/jananiravi/b2ai-tkg-casestudy/tree/56c6ff32baecc0bec3fc976954a1d287312a9318" target="_blank">56c6ff3</a>
+<a href="https://github.com/jananiravi/b2ai-tkg-casestudy/tree/ba24624bbb234d21d887ff89c2c33bde200063cf" target="_blank">ba24624</a>
 </a>
 </p>
 </div>
 <div
-id="strongRepositoryversionstrongahrefhttpsgithubcomjananiravib2aitkgcasestudytree56c6ff32baecc0bec3fc976954a1d287312a9318targetblank56c6ff3a"
+id="strongRepositoryversionstrongahrefhttpsgithubcomjananiravib2aitkgcasestudytreeba24624bbb234d21d887ff89c2c33bde200063cftargetblankba24624a"
 class="panel-collapse collapse">
 <div class="panel-body">
 <p>
@@ -370,7 +411,7 @@ reproducibility.
 </p>
 <p>
 The results in this page were generated with repository version
-<a href="https://github.com/jananiravi/b2ai-tkg-casestudy/tree/56c6ff32baecc0bec3fc976954a1d287312a9318" target="_blank">56c6ff3</a>.
+<a href="https://github.com/jananiravi/b2ai-tkg-casestudy/tree/ba24624bbb234d21d887ff89c2c33bde200063cf" target="_blank">ba24624</a>.
 See the <em>Past versions</em> tab to see a history of the changes made
 to the R Markdown and HTML files.
 </p>
@@ -385,13 +426,26 @@ were generated:
 </p>
 <pre><code>
 Ignored files:
+    Ignored:    .claude/
+    Ignored:    .github/workflows/
+    Ignored:    analysis/.Rhistory
     Ignored:    renv/library/
+
+Untracked files:
+    Untracked:  SESSION_HANDOFF.md
+    Untracked:  analysis/case_studies.Rmd
+    Untracked:  analysis/workshop_feedback_form.Rmd
+    Untracked:  analysis/workshop_session1.Rmd
+    Untracked:  analysis/workshop_session2.Rmd
+    Untracked:  analysis/workshops.Rmd
 
 Unstaged changes:
     Modified:   analysis/_site.yml
     Modified:   analysis/about.Rmd
     Modified:   analysis/index.Rmd
-    Modified:   analysis/license.Rmd
+    Modified:   analysis/map_crossdisc_niches.Rmd
+    Modified:   analysis/niche_mentorship.Rmd
+    Modified:   analysis/precision_interdisc_teaming.Rmd
 
 </code></pre>
 <p>
@@ -436,6 +490,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/jananiravi/b2ai-tkg-casestudy/blob/92bc54329f21d8f727e003fa1ed48a9dbc029320/analysis/license.Rmd" target="_blank">92bc543</a>
+</td>
+<td>
+Janani Ravi
+</td>
+<td>
+2026-08-05
+</td>
+<td>
+Add case study pages and update site
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/jananiravi/b2ai-tkg-casestudy/92bc54329f21d8f727e003fa1ed48a9dbc029320/docs/license.html" target="_blank">92bc543</a>
+</td>
+<td>
+Janani Ravi
+</td>
+<td>
+2026-08-05
+</td>
+<td>
+Add case study pages and update site
+</td>
+</tr>
 <tr>
 <td>
 Rmd
