@@ -24,6 +24,8 @@ synthesis across all three case studies.
 
 ## Pre-event setup (send ahead)
 
+- Logistics tracked in issue #8 (same issue as session 1) — confirm session 2's
+  date/room/facilitator are locked there before proceeding.
 - Email attendees a link to `map_crossdisc_niches.html` a few days before (same
   optional-skim framing as session 1's pre-read).
 - If a different facilitator is running this session than session 1, get the compiled
@@ -115,6 +117,11 @@ single capability, delivered three different ways, actually covers what attendee
   none of the three personas capture?
 - All three outputs are ranked lists with a similarity score and no explanation of *why*
   something matched. Is that a blocker for you, or good enough to act on?
+- If instead of a plain ranked list you could (a) filter by a context term the way you'd
+  filter a hotel or restaurant search, (b) click a person and see a profile card of
+  relevant stats, keywords, and links the way a map app shows a place, or (c) select a
+  few people or datasets and see what they have in common — would any of those
+  interaction styles change how useful this feels, compared to what's on the table now?
 
 **Structured form questions (see form-content page for the canonical version):**
 
@@ -123,6 +130,11 @@ single capability, delivered three different ways, actually covers what attendee
 2. Is there a use case missing that you'd want the KG to support? (free text)
 3. On a 1–5 scale, how much does the lack of a "why this matched" explanation limit how
    useful you'd find any of these three tools?
+4. Which alternate way of interacting with results would you find most useful? (single
+   choice: filtering by a context term, like a hotel/restaurant search / a clickable
+   profile card per person with stats, keywords, links / a "what do these have in
+   common" view across several selected people or datasets / the plain ranked list is
+   fine as is)
 
 ## Wrap
 

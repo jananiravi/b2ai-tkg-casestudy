@@ -80,6 +80,11 @@ members to bridge into it.
 2. Is there a use case missing that you'd want the KG to support? — *free text*
 3. How much does the lack of a "why this matched" explanation limit how useful you'd
    find any of these three tools? — *1–5 scale*
+4. Which alternate way of interacting with results would you find most useful? — *single
+   choice*: filtering by a context term, like a hotel/restaurant search / a clickable
+   profile card per person with stats, keywords, links / a "what do these have in
+   common" view across several selected people or datasets / the plain ranked list is
+   fine as is
 
 ## Notes for whoever builds the form
 

@@ -26,6 +26,9 @@ program-officer framing that isn't in scope for this audience yet).
 
 ## Pre-event setup (send ahead)
 
+- Logistics (date, room, facilitator assignment, invite list, form build) tracked in
+  issue #8 — confirm all items there are closed before proceeding with the rest of this
+  checklist.
 - Email attendees a link to `niche_mentorship.html` and `precision_interdisc_teaming.html`
   a few days before. Frame it as optional skim, not required reading — most people will
   actually read during the session, not beforehand.
