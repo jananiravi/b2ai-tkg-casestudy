@@ -5,6 +5,28 @@ navbar:
   left:
   - text: Home
     href: index.html
+  - text: Case studies
+    menu:
+    - text: "Overview"
+      href: case_studies.html
+    - text: "---------"
+    - text: "1. Sourcing niche mentorship"
+      href: niche_mentorship.html
+    - text: "2. Precision interdisciplinary teaming"
+      href: precision_interdisc_teaming.html
+    - text: "3. Mapping cross-disciplinary niches"
+      href: map_crossdisc_niches.html
+  - text: Workshops
+    menu:
+    - text: "Overview"
+      href: workshops.html
+    - text: "---------"
+    - text: "Session 1: mentorship & precision teaming"
+      href: workshop_session1.html
+    - text: "Session 2: cross-disciplinary niches & synthesis"
+      href: workshop_session2.html
+    - text: "Feedback form content"
+      href: workshop_feedback_form.html
   - text: About
     href: about.html
   - text: License

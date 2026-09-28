@@ -9,11 +9,19 @@ editor_options:
 ---
 
 Case studies exploring what the Bridge2AI Talent Knowledge Graph (KG) can and can't do
-for real workflows — sourcing niche mentorship, assembling interdisciplinary grant
+for real workflows, sourcing niche mentorship, assembling interdisciplinary grant
 teams, and mapping cross-disciplinary research niches.
 
-## Case studies
+## [Case studies](case_studies.html)
 
-* [Case study 1: Sourcing niche mentorship & wrap-around support](niche_mentorship.html)
-* [Case study 2: Precision teaming for interdisciplinary grants](precision_interdisc_teaming.html)
-* [Case study 3: Mapping and dominating cross-disciplinary niches](map_crossdisc_niches.html)
+Sourcing niche mentorship, assembling interdisciplinary grant teams, and mapping
+cross-disciplinary research niches. [Browse all case studies →](case_studies.html)
+
+## [Workshops](workshops.html)
+
+Grad/postdoc feedback sessions testing the case study personas above.
+[Browse workshop guides →](workshops.html)
+
+## Other resources
+
+* [Workshop feedback form content](workshop_feedback_form.html)

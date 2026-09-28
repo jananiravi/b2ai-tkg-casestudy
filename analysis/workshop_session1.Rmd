@@ -1,0 +1,151 @@
+---
+title: "Workshop session 1: mentorship & precision teaming"
+output:
+  workflowr::wflow_html:
+    toc: false
+editor_options:
+  chunk_output_type: console
+---
+
+Facilitator guide for a grad/postdoc feedback session on the Bridge2AI Talent Knowledge
+Graph (KG) case studies. Designed to be run by any facilitator(s), in any setting,
+without prior context beyond this page. First of two ~1-hour sessions with the same
+group — see [Workshop session 2](workshop_session2.html).
+
+## Audience
+
+Graduate students and postdocs — the intended end users of the case study personas
+being tested. ~15–30 attendees, same group across both sessions. No prior KG or
+Bridge2AI knowledge assumed.
+
+## What this session covers
+
+[Case study 1](niche_mentorship.html) (all three personas) and [Case study
+2](precision_interdisc_teaming.html) (Persona A — academic PI — only; Persona B is a
+program-officer framing that isn't in scope for this audience yet).
+
+## Pre-event setup (send ahead)
+
+- Logistics (date, room, facilitator assignment, invite list, form build) tracked in
+  issue #8 — confirm all items there are closed before proceeding with the rest of this
+  checklist.
+- Email attendees a link to `niche_mentorship.html` and `precision_interdisc_teaming.html`
+  a few days before. Frame it as optional skim, not required reading — most people will
+  actually read during the session, not beforehand.
+- Build the structured feedback form (see Forms, below) before the session — it needs to
+  be live and shareable (QR code or short link) on the day.
+- Reserve a room that supports breakout groups of 4–6 people (movable seating, or
+  multiple small tables/rooms).
+
+## Day-of setup
+
+- Print or project: the persona summaries for Case study 1 (3 personas) and Case study 2
+  Persona A — one page each is enough; full text stays on the linked pages for anyone
+  who wants more detail.
+- Have the structured-form link/QR code ready to project or hand out at the start, so
+  attendees can open it on their own device early.
+- Assign attendees into breakout groups of 4–6 as they arrive (or pre-assign if the
+  group is known ahead of time) — same groups stay together for both blocks in this
+  session.
+
+## Materials to print or share
+
+- `niche_mentorship.html` and `precision_interdisc_teaming.html` (email, pre-event).
+- One-page persona summaries for both case studies (print or project, day-of).
+- Structured feedback form link/QR code (project or hand out, day-of) — content at
+  [Workshop feedback form content](workshop_feedback_form.html), sections 0–2.
+
+## Forms
+
+Two feedback-capture tracks, run in parallel:
+
+1. Facilitator notes — free-form, using the discussion prompts below as a checklist.
+2. Structured form, filled out *during* the session by attendees on their own devices —
+   content and question types are at [Workshop feedback form
+   content](workshop_feedback_form.html) (sections 0–2 for this session). A live-fill
+   form is the only reliable capture given limited control over engagement after the
+   session ends. The per-persona questions are repeated inline below for reference, but
+   the form-content page is the source to build the actual form from.
+
+## Agenda
+
+| Time | Segment |
+|---|---|
+| 0:00–0:05 | Welcome + why we're asking (what the Bridge2AI Talent KG is, what "case study" means here) |
+| 0:05–0:10 | Recap: Case study 1 personas (3 ECR/trainee personas) |
+| 0:10–0:20 | Breakout: Case study 1 discussion |
+| 0:20–0:25 | Structured form: Case study 1 (fill individually, breakout groups stay together) |
+| 0:25–0:30 | Recap: Case study 2, Persona A (academic PI / grant co-I gap-filling) |
+| 0:30–0:40 | Breakout: Case study 2 discussion |
+| 0:40–0:45 | Structured form: Case study 2 |
+| 0:45–0:55 | Report-back (2–3 groups share one highlight each) |
+| 0:55–1:00 | Wrap + preview session 2 |
+
+Breakout groups: 4–6 people each (roughly 4–6 groups for a 15–30 person room). Keep the
+same groups for both case study blocks so there's no re-forming overhead mid-session.
+
+## Case study 1: niche mentorship — discussion block
+
+**Recap (live, ~2 min):** three synthetic personas — wet-lab-to-ML gap (Persona A),
+clinical-to-governance gap (Persona B), grant-writing-translation gap (Persona C). Full
+text in `niche_mentorship.html`.
+
+**Breakout prompts:**
+
+- Does any of these three personas match a mentorship gap you've actually had? Which
+  one, and how closely?
+- If none match closely — what's the gap you've had that isn't represented here?
+- If the KG returned you a ranked shortlist of ~10 possible mentors (name, affiliation,
+  similarity score, no explanation of *why* they matched) — would that actually be
+  useful, or too little information to act on?
+
+**Structured form questions (see form-content page for the canonical version):**
+
+1. Which persona (A/B/C/none) is closest to a real gap you've experienced? (multiple
+   choice + "none, describe your own" free text)
+2. On a 1–5 scale, how useful would a 10-person ranked shortlist (name, affiliation,
+   similarity score only) be for finding a mentor for that gap?
+3. What's missing from the persona descriptions that would make them more realistic?
+   (free text)
+
+## Case study 2: precision teaming — discussion block (Persona A only)
+
+**Recap (live, ~2 min):** academic PI preparing an R01 or K-series award, needs a co-I
+who covers a capability gap without duplicating existing team expertise — critically,
+*not* someone already a close collaborator. Full text in
+`precision_interdisc_teaming.html`.
+
+**Breakout prompts:**
+
+- Have you (or would you, if applying for your first major grant) needed a co-I like
+  this — someone who fills a specific capability gap, found through a network you don't
+  already have?
+- The KG's co-author-exclusion mechanism is unconfirmed for a real KG member (see
+  `precision_interdisc_teaming.html`, KG query spec section) — if it *doesn't* exist,
+  and the KG just resurfaces your existing collaborators, how much less useful is that
+  to you?
+- Would cross-institution/cross-DGP diversity in the candidate list matter to you, or is
+  "covers the capability gap" the only thing that matters?
+
+**Structured form questions (see form-content page for the canonical version):**
+
+1. Have you needed (or do you expect to need) a co-I to fill a specific capability gap
+   for a grant application? (yes / not yet, but expect to / no)
+2. On a 1–5 scale, how much does it matter that suggested co-Is are *not* already your
+   collaborators?
+3. On a 1–5 scale, how much does cross-institution/cross-DGP diversity matter in that
+   suggestion?
+
+## Wrap
+
+Preview session 2: case study 3 (finding an under-served research niche) plus an
+overall synthesis discussion across all three case studies. Thank attendees, confirm the
+structured form was submitted by everyone before they leave (or send a reminder link).
+
+## Follow-up
+
+- Compile facilitator notes and structured-form responses from this session into one
+  place before session 2, so the "themes from session 1" recap at the start of session 2
+  is accurate.
+- No case study edits during or right after the session — capture, then synthesize later
+  (see session 2's follow-up section for the full write-up step).
